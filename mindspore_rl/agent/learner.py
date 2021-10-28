@@ -46,7 +46,7 @@ class Learner(nn.Cell):
     def learn(self, samples):
         """
         The interface for the learn function. The behavior of the `learn` function
-        depend on the user's implementation. Usually, it takes the `samples` form
+        depend on the user's implementation. Usually, it takes the `samples` from
         replay buffer or other Tensors, and calculates the loss for updating the networks.
 
         Args:

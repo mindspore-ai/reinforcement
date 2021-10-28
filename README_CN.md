@@ -22,7 +22,7 @@
 
 ## 概述
 
-MindSpore Reinforcement是一个开源的强化学习框架，支持使用强化学习算法对agent进行分布式训练。MindSpore Reinforcement为编写强化学习算法提供了干净整洁的API抽象，它将算法与部署和执行注意事项解耦，包括加速器的使用、并行度和跨worker集群计算的分布。MindSpore Reinforcement将强化学习算法转换为一系列编译后的计算图，然后由MindSpore框架在CPU、GPU或Ascend AI处理器上高效运行。MindSpore Reinforcement的架构在如下展示:
+MindSpore Reinforcement是一个开源的强化学习框架，支持使用强化学习算法对agent进行分布式训练。MindSpore Reinforcement为编写强化学习算法提供了干净整洁的API抽象，它将算法与部署和执行注意事项解耦，包括加速器的使用、并行度和跨worker集群计算的分布。MindSpore Reinforcement将强化学习算法转换为一系列编译后的计算图，然后由MindSpore框架在CPU、GPU上高效运行。MindSpore Reinforcement的架构在如下展示:
 
 ![MindSpore_RL_Architecture](docs/mindspore_rl_architecture.svg)
 

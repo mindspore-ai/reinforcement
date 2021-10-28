@@ -35,7 +35,7 @@ class GymEnvironment(nn.Cell):
             is based on Gym, the name of environment should match with the name in Gym.
 
     Supported Platforms:
-        ``Ascend`` ``GPU`` ``CPU``
+        ``GPU`` ``CPU``
 
     Examples:
         >>> env_params = {'name': 'CartPole-v0'}

@@ -31,8 +31,8 @@ class EpsilonGreedyPolicy(policy.Policy):
     Args:
         input_network (Cell): A network returns policy action.
         size (int): Shape of epsilon.
-        epsi_high (float): A high epsilon for exploration betweens [0, 1].
-        epsi_low (float): A low epsilon for exploration betweens [0, epsi_high].
+        epsi_high (float): A high epsilon for exploration between [0, 1].
+        epsi_low (float): A low epsilon for exploration between [0, epsi_high].
         decay (float): A decay factor applied to epsilon.
         action_space_dim (int): Dimensions of the action space.
 

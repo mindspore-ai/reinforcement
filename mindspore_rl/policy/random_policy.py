@@ -23,7 +23,7 @@ from mindspore import Tensor
 
 class RandomPolicy(Policy):
     r"""
-    Produces a random action betweens [0, `acton_space_dim`).
+    Produces a random action between [0, `acton_space_dim`).
 
     Args:
         acton_space_dim(int): dimension of the action space.
@@ -46,10 +46,10 @@ class RandomPolicy(Policy):
     # pylint:disable=W0221
     def construct(self):
         """
-        Returns a random number betweens [0, `acton_space_dim`).
+        Returns a random number between [0, `acton_space_dim`).
 
         Returns:
-            A random integer betweens [0, `acton_space_dim`).
+            A random integer between [0, `acton_space_dim`).
         """
 
         return self.randint(self.shape, self.minval, self.maxval)
