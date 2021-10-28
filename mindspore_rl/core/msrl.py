@@ -31,7 +31,7 @@ class MSRL(nn.Cell):
     learning algorithm development.
 
     It exposes the following function handler to the user. The input and output of
-    these function handlers are identical to the user defined functions.
+    these function handlers are identical to the user-defined functions.
 
     .. code-block::
 
@@ -273,9 +273,10 @@ class MSRL(nn.Cell):
     def get_replay_buffer_elements(self, transpose=False, shape=None):
         """
         It will return all the elements in the replay buffer.
+
         Args:
             transpose (boolean): whether the output element needs to be transpose,
-            if transpose is true, shape will also need to be filled. Default: False
+                if transpose is true, the shape will also need to be filled. Default: False
             shape (Tuple[int]): the shape used in transpose. Default: None
 
         Returns:

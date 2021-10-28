@@ -64,4 +64,4 @@ Episode 19, steps: 235.0, reward: 10.0
 
 ## Supported Platform
 
-DQN algorithm supports  GPU, CPU and Ascend platform
+DQN algorithm supports  GPU and CPU platform

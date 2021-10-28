@@ -34,7 +34,7 @@ class GymMultiEnvironment(nn.Cell):
             with the name in Gym.
 
     Supported Platforms:
-        ``Ascend`` ``GPU`` ``CPU``
+        ``GPU`` ``CPU``
 
     Examples:
         >>> env_params = {'name': 'CartPole-v0', 'env_nums': 10}

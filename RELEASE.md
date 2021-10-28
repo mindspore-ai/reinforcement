@@ -5,7 +5,7 @@
 ### Major Features and Improvements
 
 * [BETA] Add MindSpore Reinforcement APIs for reinforcement learning.
-* [BETA] Support training with reinforcement learning algorithms on Ascend, GPU and CPU.
+* [BETA] Support training with reinforcement learning algorithms on GPU and CPU.
 * [BETA] Add implementations of DQN, PPO and AC algorithms based on MindSpore Reinforcement APIs.
 
 #### Contributors
