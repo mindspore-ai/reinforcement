@@ -92,7 +92,7 @@ class DQNActor(Actor):
         self.init_policy = params['init_policy']
         self.collect_policy = params['collect_policy']
         self.evaluate_policy = params['evaluate_policy']
-        self._environment = params['collect_environment']
+        self._environment = params['environment']
         self._eval_env = params['eval_environment']
         self.replay_buffer = params['replay_buffer']
 

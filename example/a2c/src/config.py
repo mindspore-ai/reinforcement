@@ -52,7 +52,7 @@ algorithm_config = {
         'type': A2CPolicyAndNetwork,
         'params': policy_params
     },
-    'collect_environment': {
+    'environment': {
         'type': GymEnvironment,
         'params': env_params
     },

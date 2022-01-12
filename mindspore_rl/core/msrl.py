@@ -22,6 +22,7 @@ import mindspore.nn as nn
 from mindspore.ops import operations as P
 
 from mindspore_rl.environment import GymMultiEnvironment
+from mindspore_rl.core.replay_buffer import ReplayBuffer
 
 
 class MSRL(nn.Cell):
@@ -94,7 +95,7 @@ class MSRL(nn.Cell):
         self.buffer_full = None
 
         compulsory_items = [
-            'eval_environment', 'collect_environment', 'policy_and_network',
+            'eval_environment', 'environment', 'policy_and_network',
             'actor', 'learner'
         ]
         self._compulsory_items_check(config, compulsory_items, 'config')
@@ -142,16 +143,16 @@ class MSRL(nn.Cell):
             - eval_env (object), created evaluate environment object.
         """
 
-        if 'number' in config['collect_environment']:
-            self.env_num = config['collect_environment']['number']
+        if 'number' in config['environment']:
+            self.env_num = config['environment']['number']
 
         if self.env_num > 1:
-            config['collect_environment']['type'] = GymMultiEnvironment
-            config['collect_environment']['params']['env_nums'] = self.env_num
+            config['environment']['type'] = GymMultiEnvironment
+            config['environment']['params']['env_nums'] = self.env_num
             config['eval_environment']['type'] = GymMultiEnvironment
             config['eval_environment']['params']['env_nums'] = 1
 
-        env = self._create_instance(config['collect_environment'])
+        env = self._create_instance(config['environment'])
 
         if 'eval_environment' in config:
             eval_env = self._create_instance(config['eval_environment'])
@@ -185,28 +186,27 @@ class MSRL(nn.Cell):
         Returns:
             replay_buffer (object), created replay buffer object.
         """
-        replay_buffer_config = config['replay_buffer']
-        compulsory_item = ['type', 'capacity', 'data_shape', 'data_type']
+        replay_buffer_config = config['actor']['replay_buffer']
+        compulsory_item = ['capacity', 'shape', 'type']
         self._compulsory_items_check(replay_buffer_config, compulsory_item,
                                      'replay_buffer')
 
         num_replay_buffer = replay_buffer_config.get('number')
-        replay_buffer_type = replay_buffer_config['type']
         capacity = replay_buffer_config['capacity']
-        buffer_data_shapes = replay_buffer_config['data_shape']
-        buffer_data_type = replay_buffer_config['data_type']
+        buffer_data_shapes = replay_buffer_config['shape']
+        buffer_data_type = replay_buffer_config['type']
 
         sample_size = replay_buffer_config.get('sample_size')
         if not sample_size:
             sample_size = 32
 
         if (not num_replay_buffer) or num_replay_buffer == 1:
-            buffer = replay_buffer_type(sample_size, capacity,
-                                        buffer_data_shapes, buffer_data_type)
+            buffer = ReplayBuffer(sample_size, capacity,
+                                  buffer_data_shapes, buffer_data_type)
         else:
             buffer = [
-                replay_buffer_type(sample_size, capacity, buffer_data_shapes,
-                                   buffer_data_type) for _ in num_replay_buffer
+                ReplayBuffer(sample_size, capacity, buffer_data_shapes,
+                             buffer_data_type) for _ in num_replay_buffer
             ]
         return buffer
 
@@ -258,7 +258,7 @@ class MSRL(nn.Cell):
             config['actor']['params'] = {}
         if config['actor'].get('environment'):
             config['actor']['params'][
-                'collect_environment'] = self.collect_environment
+                'environment'] = self.collect_environment
             config['actor']['params'][
                 'eval_environment'] = self.eval_environment
 
@@ -323,7 +323,7 @@ class MSRL(nn.Cell):
             config)
 
         # ---------------------- ReplayBuffer ----------------------
-        replay_buffer = config.get('replay_buffer')
+        replay_buffer = config['actor'].get('replay_buffer')
         if replay_buffer:
             self.buffers = self.__create_replay_buffer(config)
             self.replay_buffer_sample = self.buffers.sample

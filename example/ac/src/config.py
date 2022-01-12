@@ -57,7 +57,7 @@ algorithm_config = {
         'type': ACPolicyAndNetwork,
         'params': policy_params
     },
-    'collect_environment': {
+    'environment': {
         'type': GymEnvironment,
         'params': env_params
     },
