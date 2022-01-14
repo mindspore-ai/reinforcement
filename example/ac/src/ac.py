@@ -125,7 +125,7 @@ class ACActor(Actor):
     def __init__(self, params=None):
         super(ACActor, self).__init__()
         self._params_config = params
-        self._environment = params['collect_environment']
+        self._environment = params['environment']
         self._eval_env = params['eval_environment']
         self.actor_net = params['actor_net']
         self.c_dist = msd.Categorical(dtype=mindspore.float32)

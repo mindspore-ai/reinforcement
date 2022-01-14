@@ -100,7 +100,7 @@ class A2CActor(Actor):
         super(A2CActor, self).__init__()
         self._params_config = params
         self.a2c_net = params['a2c_net']
-        self._environment = params['collect_environment']
+        self._environment = params['environment']
         self.c_dist = msd.Categorical(dtype=mindspore.float32, seed=seed)
         self.expand_dims = P.ExpandDims()
         self.reshape = P.Reshape()

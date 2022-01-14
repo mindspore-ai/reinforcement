@@ -187,7 +187,7 @@ class PPOActor(Actor):
     def __init__(self, params=None):
         super(PPOActor, self).__init__()
         self._params_config = params
-        self._environment = params['collect_environment']
+        self._environment = params['environment']
         self._eval_env = params['eval_environment']
         self._buffer = params['replay_buffer']
         self.actor_net = params['actor_net']
