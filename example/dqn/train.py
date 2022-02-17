@@ -21,6 +21,7 @@ import argparse
 from src import config
 from src.dqn_trainer import DQNTrainer
 from mindspore import context
+from mindspore import dtype as mstype
 from mindspore_rl.core import Session
 from mindspore_rl.utils.callback import CheckpointCallback, LossCallback, EvaluateCallback
 
@@ -36,6 +37,10 @@ def train(episode=options.episode):
         context.set_context(device_target=options.device_target)
     if context.get_context('device_target') in ['CPU']:
         context.set_context(enable_graph_kernel=True)
+
+    compute_type = mstype.float16 if context.get_context('device_target') in ['Ascend'] else mstype.float32
+    config.algorithm_config['policy_and_network']['params']['compute_type'] = compute_type
+
     context.set_context(mode=context.GRAPH_MODE)
     dqn_session = Session(config.algorithm_config)
     loss_cb = LossCallback()

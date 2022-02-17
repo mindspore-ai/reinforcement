@@ -17,6 +17,8 @@ FullyConnectedNet.
 """
 
 import mindspore.nn as nn
+from mindspore import dtype as mstype
+from mindspore.ops import operations as P
 
 
 class FullyConnectedNet(nn.Cell):
@@ -36,17 +38,18 @@ class FullyConnectedNet(nn.Cell):
         (2, 2)
     """
 
-    def __init__(self, input_size, hidden_size, output_size):
+    def __init__(self, input_size, hidden_size, output_size, compute_type=mstype.float32):
         super(FullyConnectedNet, self).__init__()
         self.linear1 = nn.Dense(
             input_size,
             hidden_size,
-            weight_init="XavierUniform")
+            weight_init="XavierUniform").to_float(compute_type)
         self.linear2 = nn.Dense(
             hidden_size,
             output_size,
-            weight_init="XavierUniform")
+            weight_init="XavierUniform").to_float(compute_type)
         self.relu = nn.ReLU()
+        self.cast = P.Cast()
 
     def construct(self, x):
         """
@@ -60,4 +63,5 @@ class FullyConnectedNet(nn.Cell):
         """
         x = self.relu(self.linear1(x))
         x = self.linear2(x)
+        x = self.cast(x, mstype.float32)
         return x

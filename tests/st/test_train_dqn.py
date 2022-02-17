@@ -29,21 +29,40 @@ import pytest
 from dqn.src import config
 from dqn.src.dqn_trainer import DQNTrainer
 from mindspore import context
+from mindspore import dtype as mstype
 from mindspore_rl.core import Session
 from mindspore_rl.utils.callback import LossCallback
 
 @pytest.mark.level0
 @pytest.mark.platform_x86_gpu_training
-@pytest.mark.platform_x86_ascend_training
-@pytest.mark.platform_arm_ascend_training
 @pytest.mark.platform_x86_cpu
 @pytest.mark.env_onecard
 def test_train_dqn():
     '''
-    Train the DQN.
+    Feature: Test dqn algorithm.
+    Description: Test dqn algorithm.
+    Expectation: success.
     '''
     context.set_context(mode=context.GRAPH_MODE)
     loss_cb = LossCallback()
+    config.algorithm_config['policy_and_network']['params']['compute_type'] = mstype.float32
+    ac_session = Session(config.algorithm_config)
+    ac_session.run(class_type=DQNTrainer, episode=5, params=config.trainer_params, callbacks=[loss_cb])
+    assert True
+
+@pytest.mark.level0
+@pytest.mark.platform_x86_ascend_training
+@pytest.mark.platform_arm_ascend_training
+@pytest.mark.env_onecard
+def test_train_dqn_ascend_fp16():
+    '''
+    Feature: Test dqn algorithm.
+    Description: Test dqn algorithm.
+    Expectation: success.
+    '''
+    context.set_context(mode=context.GRAPH_MODE)
+    loss_cb = LossCallback()
+    config.algorithm_config['policy_and_network']['params']['compute_type'] = mstype.float16
     ac_session = Session(config.algorithm_config)
     ac_session.run(class_type=DQNTrainer, episode=5, params=config.trainer_params, callbacks=[loss_cb])
     assert True
