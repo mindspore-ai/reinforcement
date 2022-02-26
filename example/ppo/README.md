@@ -19,7 +19,7 @@ Before running PPO, you should first install [MindSpore](https://www.mindspore.c
 - numpy >= 1.17.0
 - matplotlib >=3.1.3
 - [gym](https://github.com/openai/gym) >= 0.18.3
-- [mujoco-py](https://github.com/openai/mujoco-py)<2.1,>=2.0
+- [mujoco-py](https://github.com/openai/mujoco-py)<2.2,>=2.1
 
 After installation, you can directly use the following command to run the PPO algorithm.
 
