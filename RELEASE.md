@@ -1,12 +1,11 @@
-# **MindSpore Reinforcement Learning 0.2.0**
+# **MindSpore Reinforcement Learning 0.2.1**
 
-## Reinforcement 0.2.0 Release Notes
+## Reinforcement 0.2.1 Release Notes
 
 ### Major Features and Improvements
 
-* [STABLE] Support A2C algorithm with CartPole-v0 environment in PyNative mode on CPU/GPU platform.
-* [STABLE] Optimize the performance of the PPO algorithm on Ascend platform.
-* [STABLE] Add TensorArray interface to support store tensors in dynamic array for episodic environment.
+* [STABLE] Modify the gym dependency version.
+* [STABLE] Update Mujoco installation document.
 
 ### Contributors
 

@@ -19,7 +19,7 @@ from setuptools import setup, find_packages
 
 setup(
     name='mindspore_rl',
-    version='0.2.0',
+    version='0.2.1',
     author='The MindSpore Authors',
     author_email='contact@mindspore.cn',
     description='A MindSpore reinforcement learning framework.',
