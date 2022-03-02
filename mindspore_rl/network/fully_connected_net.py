@@ -29,6 +29,7 @@ class FullyConnectedNet(nn.Cell):
         input_size(int): numbers of input size.
         hidden_size(int): numbers of hidden layers.
         output_size(int): numbers of output size.
+        compute_type(mindspore.dtype): data type used for fully connected layer. Default: mindspore.dtype.float32
 
     Examples:
         >>> input = Tensor(np.ones([2, 4]).astype(np.float32))
