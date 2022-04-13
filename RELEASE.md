@@ -1,12 +1,18 @@
-# **MindSpore Reinforcement Learning 0.2.0**
+# **MindSpore Reinforcement Learning 0.3.0**
 
-## Reinforcement 0.2.0 Release Notes
+## Reinforcement 0.3.0 Release Notes
 
 ### Major Features and Improvements
 
-* [STABLE] Support A2C algorithm with CartPole-v0 environment in PyNative mode on CPU/GPU platform.
-* [STABLE] Optimize the performance of the PPO algorithm on Ascend platform.
-* [STABLE] Add TensorArray interface to support store tensors in dynamic array for episodic environment.
+* [STABLE] Support DDPG reinforcement learning algorithm.
+
+### API Change
+
+#### Python API
+
+* Change the API of following classes: `Actor`, `Agent`. Their function name change to `act(self, phase, params)` and `get_action(self, phase, params)`. Moreover, Some useless functions are deleted (`env_setter`, `act_init`, `evaluate`, `reset_collect_actor`, `reset_eval_actor`, `update in Actor class`, and `init`, `reset_all` in `Agent` class). Also the hierarchy relationship of configuration file changes. `ReplayBuffer` is moved out from `actor`, and become a new key in algorithm config. ([Rearrange API PR !29](https://e.gitee.com/mind_spore/repos/mindspore/reinforcement/pulls/29))
+
+* Add the virtual base class of Environment. It has `step`, `reset` functions and 5 space properties (`action_space`, `observation_space`, `reward_space`, `done_space` and `config`)
 
 ### Contributors
 
