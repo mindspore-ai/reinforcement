@@ -1,5 +1,7 @@
 # MindSpore Reinforcement Release Notes
 
+[查看中文](./RELEASE_CN.md)
+
 ## MindSpore Reinforcement 0.3.0 Release Notes
 
 ### Major Features and Improvements
