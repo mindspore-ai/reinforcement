@@ -1,4 +1,4 @@
-# MindSpore Reinforcement Learning 0.3.0
+# MindSpore Reinforcement Release Notes
 
 [View English](./RELEASE_CN.md)
 
