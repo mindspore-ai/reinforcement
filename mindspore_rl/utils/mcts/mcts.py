@@ -179,9 +179,9 @@ class MCTS(nn.Cell):
         return action
 
 
-class CustomizedMCTS(nn.Cell):
+class AlgorithmFunc(nn.Cell):
     """
-    This is the base class for user to customize algorithm in MCTS. User nned to inherit this base class
+    This is the base class for user to customize algorithm in MCTS. User need to inherit this base class
     and implement all the functions with SAME input and output.
     """
     def __init__(self):
@@ -214,7 +214,7 @@ class CustomizedMCTS(nn.Cell):
         raise NotImplementedError("You must implement this function")
 
 
-class VanillaFunc(CustomizedMCTS):
+class VanillaFunc(AlgorithmFunc):
     """
     This is the customized algorithm for VanillaMCTS. The prior of each legal action is uniform
     distribution and it plays randomly to obtain the result of simulation.

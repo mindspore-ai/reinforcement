@@ -45,6 +45,7 @@ class TicTacToeEnvironment(Environment):
         ``Ascend`` ``GPU`` ``CPU``
 
     Examples:
+        >>> from mindspore_rl.environment import TicTacToeEnvironment
         >>> env_params = {}
         >>> environment = TicTacToeEnvironment(env_params, 0)
         >>> print(environment)

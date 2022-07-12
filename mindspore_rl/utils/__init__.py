@@ -22,7 +22,7 @@ from mindspore_rl.utils.soft_update import SoftUpdate
 from mindspore_rl.utils.noise import OUNoise
 from mindspore_rl.utils.callback import CallbackParam
 from mindspore_rl.utils.callback import CallbackManager
-from .mcts import VanillaFunc, CustomizedMCTS, MCTS
+from .mcts import VanillaFunc, AlgorithmFunc, MCTS
 
 __all__ = ["DiscountedReturn", "CallbackParam", "CallbackManager",
-           "SoftUpdate", "OUNoise", "VanillaFunc", "CustomizedMCTS", "MCTS"]
+           "SoftUpdate", "OUNoise", "VanillaFunc", "AlgorithmFunc", "MCTS"]
