@@ -2,6 +2,13 @@
 
 [查看中文](./RELEASE_CN.md)
 
+## MindSpore Reinforcement 0.5.0 Release Notes
+
+### Major Features and Improvements
+
+- [STABLE] Add Chinese version of all existed api.
+- [STABLE] Add multi-agent algorithm QMIX.
+
 ## MindSpore Reinforcement 0.3.0 Release Notes
 
 ### Major Features and Improvements
