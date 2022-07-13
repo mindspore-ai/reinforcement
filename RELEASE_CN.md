@@ -2,6 +2,13 @@
 
 [View English](./RELEASE_CN.md)
 
+## MindSpore Reinforcement 0.5.0 Release Notes
+
+### 主要特性和增强
+
+- [STABLE] 增加现有接口的中文API文档。
+- [STABLE] 增加强化学习多智能体算法QMIX。
+
 ## MindSpore Reinforcement 0.3.0 Release Notes
 
 ### 主要特性和增强

@@ -164,7 +164,7 @@ class MCTS(nn.Cell):
             if not self.env.is_terminal():
                 expanded = self.true
                 self.mcts_expansion(tree_handle, self.node_type, visited_node,
-                                    legal_action, prior, reward, current_player)
+                                    legal_action, reward, prior, current_player)
             else:
                 self.update_node_outcome(tree_handle, visited_node, visited_path_length-1, reward)
                 self.update_node_terminal(tree_handle, visited_node, visited_path_length-1, self.true)
