@@ -6,7 +6,7 @@
 
 ### Major Features and Improvements
 
-- [STABLE] Add Chinese version of all existed api.
+- [STABLE] Add Chinese version of all existed API.
 - [STABLE] Add multi-agent algorithm QMIX.
 
 ## MindSpore Reinforcement 0.3.0 Release Notes
