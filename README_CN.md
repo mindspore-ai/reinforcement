@@ -82,13 +82,13 @@ import mindspore_rl
 
 ## 快速入门
 
-以一个简单的算法[Deep Q-Learning (DQN)](https://www.mindspore.cn/reinforcement/docs/zh-CN/master/dqn.html) 示例，演示MindSpore Reinforcement如何使用。
+以一个简单的算法[Deep Q-Learning (DQN)](https://www.mindspore.cn/reinforcement/docs/zh-CN/r0.5/dqn.html) 示例，演示MindSpore Reinforcement如何使用。
 
 ## 文档
 
 ### 开发者教程
 
-有关安装指南、教程和API的更多详细信息，请参阅[用户文档](https://www.mindspore.cn/reinforcement/docs/zh-CN/master/index.html)。
+有关安装指南、教程和API的更多详细信息，请参阅[用户文档](https://www.mindspore.cn/reinforcement/docs/zh-CN/r0.5/index.html)。
 
 ## 社区
 
@@ -106,4 +106,4 @@ import mindspore_rl
 
 ## 许可证
 
-[Apache License 2.0](https://gitee.com/mindspore/reinforcement/blob/master/LICENSE)
+[Apache License 2.0](https://gitee.com/mindspore/reinforcement/blob/r0.5/LICENSE)

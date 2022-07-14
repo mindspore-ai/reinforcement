@@ -82,13 +82,13 @@ import mindspore_rl
 
 ## Quick Start
 
-[Deep Q-Learning (DQN)](https://www.mindspore.cn/reinforcement/docs/en/master/dqn.html) is used to demonstrate how to use MindSpore Reinforcement.
+[Deep Q-Learning (DQN)](https://www.mindspore.cn/reinforcement/docs/en/r0.5/dqn.html) is used to demonstrate how to use MindSpore Reinforcement.
 
 ## Documents
 
 ### Developer Guide
 
-For more details about the installation guide, tutorials, and APIs, see [MindSpore Reinforcement API Docs](https://www.mindspore.cn/reinforcement/docs/en/master/index.html).
+For more details about the installation guide, tutorials, and APIs, see [MindSpore Reinforcement API Docs](https://www.mindspore.cn/reinforcement/docs/en/r0.5/index.html).
 
 ## Community
 
@@ -106,5 +106,5 @@ Welcome to MindSpore contribution.
 
 ## License
 
-[Apache License 2.0](https://gitee.com/mindspore/reinforcement/blob/master/LICENSE)
+[Apache License 2.0](https://gitee.com/mindspore/reinforcement/blob/r0.5/LICENSE)
 
