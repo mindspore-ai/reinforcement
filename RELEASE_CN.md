@@ -1,6 +1,6 @@
 # MindSpore Reinforcement Release Notes
 
-[View English](./RELEASE_CN.md)
+[View English](./RELEASE.md)
 
 ## MindSpore Reinforcement 0.5.0 Release Notes
 
