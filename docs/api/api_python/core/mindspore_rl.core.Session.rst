@@ -7,7 +7,7 @@
 
     - **algo_config** (dict) - 算法的配置或算法的部署配置。
     - **deploy_config** (dict) - 分布式的部署配置。更多算法配置的详细信息，请看 
-      https://www.mindspore.cn/reinforcement/docs/zh-CN/master/custom_config_info.html
+      https://www.mindspore.cn/reinforcement/docs/zh-CN/r0.5/custom_config_info.html
 
     .. py:method:: run(class_type=None, is_train=True, episode=0, duration=0, params=None, callbacks=None)
 

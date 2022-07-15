@@ -48,7 +48,7 @@ class Session():
         alg_config (dict): the algorithm configuration or the deployment configuration of the algorithm.
         deploy_config (dict): the deployment configuration for distribution. Default: None.
             For more details of configuration of algorithm, please have a look at
-            https://www.mindspore.cn/reinforcement/docs/zh-CN/master/custom_config_info.html
+            https://www.mindspore.cn/reinforcement/docs/zh-CN/r0.5/custom_config_info.html
     """
 
     def __init__(self, alg_config, deploy_config=None):
