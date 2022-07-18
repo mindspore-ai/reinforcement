@@ -54,6 +54,8 @@ mindspore_rl.environment
 
 .. include:: environment/mindspore_rl.environment.StarCraft2Environment.rst
 
+.. include:: environment/mindspore_rl.environment.TicTacToeEnvironment.rst
+
 .. automodule:: mindspore_rl.environment
     :members:
 

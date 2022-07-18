@@ -11,6 +11,7 @@
         +---+---+---+
 
     **参数：**
+
     - **params** (dict) - 字典包含TicTacToeEnvironment类中所需要的所有参数。
     - **env_id** (int) - 环境id，用于设置环境内种子。
 
